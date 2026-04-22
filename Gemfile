@@ -18,5 +18,8 @@ gem 'mutex_m'
 gem 'base64'
 gem 'bigdecimal'
 
-gem 'mysql2', group: :mysql
-gem 'sqlite3'
+gem 'mysql2', group: :mysql, platforms: [:mri, :windows]
+gem 'jdbc-mysql', group: :mysql, platforms: [:jruby]
+
+gem 'sqlite3', platforms: [:mri, :windows]
+gem 'jdbc-sqlite3', platforms: [:jruby]

@@ -22,12 +22,6 @@ jobs:
       BUNDLE_FROZEN: "false"
     steps:
     - uses: actions/checkout@v6
-    - name: Setup Java 21 for JRuby
-      if: startsWith(matrix.ruby, 'jruby')
-      uses: actions/setup-java@v5
-      with:
-        distribution: temurin
-        java-version: '21'
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
